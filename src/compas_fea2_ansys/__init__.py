@@ -293,9 +293,10 @@ try:
         AnsysParametersFile,
     )
 
-    @plugin(category='fea_backends')
+    # build the plugin registry
     def register_backend():
-        backend = compas_fea2.BACKENDS['ansys']
+        backend = compas_fea2.BACKENDS['compas_fea2_ansys']
+
 
         backend[Model] = AnsysModel
         backend[DeformablePart] = AnsysPart
